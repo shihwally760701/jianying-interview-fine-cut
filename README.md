@@ -64,6 +64,12 @@
 
 要校准底部字幕，可以把最后一句换成「只核对底部对话字幕的错字和时间」。要做人物遮字，告诉技能哪些词需要放在人物后方，哪些词要逐字出场。还可以直接指定姓名牌的文字、字重和底板形状。
 
+已有字幕时，可以用 [VideoCaptioner 校对流程](skills/jianying-interview-edit/references/videocaptioner.md) 找出疑似错字和术语。把对得上剪后原声的改动逐条写回原生字幕。示例指令如下。
+
+```text
+用 $jianying-interview-edit 从最新的剪映草稿取底部对话字幕。用本机 VideoCaptioner 校对错字和专业术语，沿用现有分句和时间码。发现可疑改动先对照原声，再把确认的字词写回剪映。
+```
+
 ### 5. 制作上下集封面
 
 ```text
@@ -76,6 +82,7 @@
 
 - **剪映电脑端。** 可直接在剪映里调整剪点、轨道和样式。能用的自动化方式取决于当前 Codex 会话和剪映版本。
 - **可选批量处理。** 有可读草稿或需要批量生成时，可按 [pyJianYingDraft 上游文档](https://github.com/GuanYixuan/pyJianYingDraft) 安装 Python 库。先在测试项目验证轨道、文本和素材链接，再处理正式草稿。模板读取、复合片段、抠像和自动导出要分别验证，具体支持范围可查上游版本说明。
+- **可选字幕校对。** VideoCaptioner 可把现有字幕送到本机兼容模型生成候选。使用外部模型前先确认服务和发送范围。见 [安装、命令与回写检查](skills/jianying-interview-edit/references/videocaptioner.md)。
 - **可选转写与封面工具。** 有现成转写就检查时基并复用。封面可以用实拍帧排版，也可以在需求允许时用图像工具以实拍帧为参考生成。
 
 ## 交付时怎么验收
@@ -90,10 +97,12 @@ skills/jianying-interview-edit/
 ├── agents/openai.yaml
 └── references/
     ├── dialogue-and-sync.md
-    └── graphics-and-delivery.md
+    ├── graphics-and-delivery.md
+    └── videocaptioner.md
 ```
 
 - [访谈删留与双机位对时](skills/jianying-interview-edit/references/dialogue-and-sync.md)
 - [花字、字幕、图层与封面验收](skills/jianying-interview-edit/references/graphics-and-delivery.md)
+- [用 VideoCaptioner 校对现有字幕](skills/jianying-interview-edit/references/videocaptioner.md)
 
 本仓库发布工作流技能和使用文档，采用 [MIT 许可证](LICENSE)。剪映、pyJianYingDraft 和所用字体、素材各自适用其发布条款。
