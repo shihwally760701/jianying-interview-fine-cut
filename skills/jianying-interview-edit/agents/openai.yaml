@@ -1,4 +1,4 @@
 interface:
-  display_name: "剪映访谈精剪"
+  display_name: "Jianying Interview Fine Cut"
   short_description: "沿用手修节奏精剪访谈，同步机位并交付可编辑剪映草稿"
   default_prompt: "使用 $jianying-interview-edit，从我最新保存的剪映草稿继续，沿用我的气口、花字和镜头节奏。"
