@@ -17,7 +17,7 @@
 **在 Codex 中安装。** 把下面这句话发给 Codex。
 
 ```text
-请用 $skill-installer 安装 GitHub 仓库 shihwally760701/SHIH-PO-HAN-SKILL 中的 skills/jianying-interview-edit。
+请用 $skill-installer 安装 GitHub 仓库 shihwally760701/jianying-interview-fine-cut 中的 skills/jianying-interview-edit。
 ```
 
 下一轮输入 `$jianying-interview-edit`，接着写素材位置和需要做的事。
